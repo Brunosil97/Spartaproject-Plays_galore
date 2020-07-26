@@ -12,8 +12,8 @@ namespace PlayGalore_model.Migrations
                 {
                     AuthorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
+                    FirstName = table.Column<string>(maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,8 +26,8 @@ namespace PlayGalore_model.Migrations
                 {
                     TheatreId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    Location = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 50, nullable: true),
+                    Location = table.Column<string>(maxLength: 50, nullable: true),
                     Capacity = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -43,9 +43,9 @@ namespace PlayGalore_model.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AuthorId = table.Column<int>(nullable: false),
                     TheatreId = table.Column<int>(nullable: true),
-                    Title = table.Column<string>(nullable: true),
-                    Bio = table.Column<string>(nullable: true),
-                    Genre = table.Column<string>(nullable: true)
+                    Title = table.Column<string>(maxLength: 50, nullable: true),
+                    Bio = table.Column<string>(maxLength: 500, nullable: true),
+                    Genre = table.Column<string>(maxLength: 25, nullable: true)
                 },
                 constraints: table =>
                 {
