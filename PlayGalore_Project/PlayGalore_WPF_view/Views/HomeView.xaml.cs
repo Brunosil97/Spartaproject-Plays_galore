@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlayGalore_model.Models;
+using PlayGalore_WPF_view.AddPages;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +20,33 @@ namespace PlayGalore_WPF_view.Views
     /// </summary>
     public partial class HomeView : UserControl
     {
+
+        public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
         public HomeView()
         {
             InitializeComponent();
+            DisplayRetrievedPlaysOnScroll();
+        }
+
+        public void DisplayRetrievedPlaysOnScroll()
+        {
+           var plays = _mainWindow.RetrieveAllPlaysForHome();
+            PlayContainer.ItemsSource = plays;
+            
+        }
+
+        private void PlayContainer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(PlayContainer.SelectedItem != null)
+            {
+                _mainWindow.SetSelectedPlay(PlayContainer.SelectedItem);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddPlay addPlay = new AddPlay();
+            addPlay.Show();
         }
     }
 }

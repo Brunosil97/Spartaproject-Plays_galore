@@ -1,4 +1,5 @@
 ﻿using PlayGalore_controller;
+using PlayGalore_model.Models;
 using PlayGalore_WPF_view.Views;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,27 @@ namespace PlayGalore_WPF_view
             DataContext = new HomeView();
         }
 
+        public List<Play> RetrieveAllPlaysForHome()
+        {
+            return _playFunctions.RetrieveAllPlays();
+        }
+
+        public List<Author> RetrieveAllAuthors()
+        {
+            return _authorFunctions.RetrieveAllAuthors();
+        }
+
+        public List<Theatre> RetrieveAllTheatres()
+        {
+            return _theatreFunctions.RetrieveAllTheatres();
+        }
+
+        public void CreateNewPlay(string title, string bio, string genre, object author, object theatre)
+        {
+            _playFunctions.CreateAPlay(title, bio, genre, author, theatre);
+        }
+        
+
         private void HomeView_Clicked(object sender, RoutedEventArgs e)
         {
             DataContext = new HomeView();
@@ -48,6 +70,11 @@ namespace PlayGalore_WPF_view
         private void TheatreView_Clicked(object sender, RoutedEventArgs e)
         {
             DataContext = new TheatreView();
+        }
+
+        public void SetSelectedPlay(object selectedItem)
+        {
+            _playFunctions.SetSelectedPlay(selectedItem);
         }
     }
 }

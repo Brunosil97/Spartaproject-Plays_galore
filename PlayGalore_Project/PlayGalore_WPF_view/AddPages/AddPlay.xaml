@@ -1,0 +1,23 @@
+﻿<Window x:Class="PlayGalore_WPF_view.AddPages.AddPlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlayGalore_WPF_view.AddPages"
+        mc:Ignorable="d"
+        Title="AddPlay" Height="450" Width="450">
+    <Grid Background="Gray">
+        <ComboBox x:Name="AuthorCombo" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="TheatreCombo" HorizontalAlignment="Left" Margin="260,293,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="10,63,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Title:" Margin="10,32,356,376"/>
+        <Label Content="Bio:" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BioBox" HorizontalAlignment="Left" Margin="10,112,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="415" Height="54"/>
+        <Label Content="Select Author:" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select Theatre:" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="260,360,0,0" VerticalAlignment="Top" Height="33" Width="127" Click="Button_Click"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="GenreBox" HorizontalAlignment="Left" Margin="10,222,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
