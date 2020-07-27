@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayGalore_controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,14 @@ namespace PlayGalore_WPF_view
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+        public PlayController _playFunctions = new PlayController();
+
+        public TheatreController _theatreFunctions = new TheatreController();
+
+        public AuthorController _authorFunctions = new AuthorController();
+   
         public MainWindow()
         {
             InitializeComponent();
