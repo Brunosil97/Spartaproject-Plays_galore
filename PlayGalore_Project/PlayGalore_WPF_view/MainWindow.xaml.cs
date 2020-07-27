@@ -1,4 +1,5 @@
 ﻿using PlayGalore_controller;
+using PlayGalore_WPF_view.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,22 @@ namespace PlayGalore_WPF_view
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new HomeView();
+        }
+
+        private void HomeView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new HomeView();
+        }
+
+        private void AuthorView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AuthorView();
+        }
+
+        private void TheatreView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new TheatreView();
         }
     }
 }

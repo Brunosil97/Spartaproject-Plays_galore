@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlayGalore_WPF_view"
         mc:Ignorable="d"
+        xmlns:views="clr-namespace:PlayGalore_WPF_view.Views"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="50" Grid.ColumnSpan="5" HorizontalAlignment="Center">Plays Galore</TextBlock>
+
+        <DockPanel Background="Gray" Grid.Row="1" Grid.Column="0" Grid.RowSpan="5">
+            <StackPanel>
+                <Button Content="Home" Click="HomeView_Clicked"/>
+                <Button Content="Authors" Click="AuthorView_Clicked"/>
+                <Button Content="Theatres" Click="TheatreView_Clicked"/>
+            </StackPanel>
+        </DockPanel>
+
+
+        <ContentControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
     </Grid>
 </Window>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PlayGalore_controller
 {
-    class PlayController
+    public class PlayController
     {
     }
 }
