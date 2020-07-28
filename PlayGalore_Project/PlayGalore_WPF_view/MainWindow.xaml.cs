@@ -61,6 +61,17 @@ namespace PlayGalore_WPF_view
             _authorFunctions.CreateAAuthor(lastName, firstName);
         }
 
+        public void DeletePlay(int playId)
+        {
+            _playFunctions.DeleteAPlay(playId);
+        }
+
+        public void UpdatePlay(int playId, string title, string bio, string genre, object author, object theatre)
+        {
+            _playFunctions.UpdateAPlay(playId, title, bio, genre, author, theatre);
+        }
+
+
         public void UpdateAuthor(int authorId, string firstName, string lastName)
         {
             _authorFunctions.UpdateExistingAuthor(authorId, firstName, lastName);
@@ -71,14 +82,18 @@ namespace PlayGalore_WPF_view
             _authorFunctions.DeleteExistingAuthor(authorId);
         }
 
-        public void DeletePlay(int playId)
+        public void CreateNewTheatre(string name, string location, int capacity)
         {
-            _playFunctions.DeleteAPlay(playId);
+            _theatreFunctions.CreateATheatre(name, location, capacity);
         }
 
-        public void UpdatePlay(int playId, string title, string bio, string genre, object author, object theatre)
+        public void UpdateTheatre(int theatreId, string name, string location, int capacity)
         {
-            _playFunctions.UpdateAPlay(playId, title, bio, genre, author, theatre);
+            _theatreFunctions.UpdateExistingTheatre(theatreId, name, location, capacity);
+        }
+        public void DeleteTheatre(int theatreId)
+        {
+            _theatreFunctions.DeleteExistingTheatre(theatreId);
         }
 
         private void HomeView_Clicked(object sender, RoutedEventArgs e)
@@ -104,6 +119,11 @@ namespace PlayGalore_WPF_view
         public void SetSelectedAuthor(object selectedItem)
         {
             _authorFunctions.SetSelectedAuthor(selectedItem);
+        }
+
+        public void SetSelectedTheatre(object selectedItem)
+        {
+            _theatreFunctions.SetSelectedTheatre(selectedItem);
         }
     }
 }

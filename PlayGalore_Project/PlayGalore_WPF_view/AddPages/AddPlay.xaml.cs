@@ -48,5 +48,10 @@ namespace PlayGalore_WPF_view.AddPages
 
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
