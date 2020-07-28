@@ -40,6 +40,7 @@ namespace PlayGalore_WPF_view.Views
             if(PlayContainer.SelectedItem != null)
             {
                 _mainWindow.SetSelectedPlay(PlayContainer.SelectedItem);
+                DisplayRetrievedPlaysOnScroll();
             }
         }
 

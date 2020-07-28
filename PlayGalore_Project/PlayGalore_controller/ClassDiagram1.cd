@@ -1,2 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlayGalore_model.Models.Author">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PlayGalore_model.Models.Play">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Author" />
+      <Property Name="Theatre" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayGalore_model.Models.Theatre">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PlayGalore_controller.AuthorController">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayGalore_controller.PlayController">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAEAAAAAAAEAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Controllers\PlayController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="selectedPlay" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayGalore_controller.TheatreController">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\TheatreController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -20,13 +20,25 @@ namespace PlayGalore_controller
             
         }
 
+        //[Obsolete]
         public void CreateAPlay(string title, string bio, string genre, object author, object theatre)
         {
-            using(var db = new PlayContext())
+
+            int? theatreObjId = null;
+
+            if(theatre != null) { theatreObjId = ((Theatre)theatre).TheatreId; };
+
+            using (var db = new PlayContext())
             {
-                var play = new Play();
-                play.Title = title; play.Bio = bio; play.Genre = genre; 
-                play.AuthorId = (Author)author.AuthorId; play.TheatreId = (Theatre)theatre.TheatreId;
+                db.Add(new Play
+                {
+                    Title = title,
+                    Bio = bio,
+                    Genre = genre,
+                    AuthorId = ((Author)author).AuthorId,
+                    TheatreId = theatreObjId
+                });
+                db.SaveChanges();
             }
         }
 
