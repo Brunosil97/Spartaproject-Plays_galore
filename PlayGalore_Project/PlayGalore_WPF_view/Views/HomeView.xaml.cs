@@ -51,11 +51,6 @@ namespace PlayGalore_WPF_view.Views
             addPlay.Show();
         }
 
-        private void PlayContainer_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount >= 2)

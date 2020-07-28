@@ -56,6 +56,21 @@ namespace PlayGalore_WPF_view
             _playFunctions.CreateAPlay(title, bio, genre, author, theatre);
         }
 
+        public void CreateNewAuthor(string lastName, string firstName)
+        {
+            _authorFunctions.CreateAAuthor(lastName, firstName);
+        }
+
+        public void UpdateAuthor(int authorId, string firstName, string lastName)
+        {
+            _authorFunctions.UpdateExistingAuthor(authorId, firstName, lastName);
+        }
+
+        public void DeleteAuthor(int authorId)
+        {
+            _authorFunctions.DeleteExistingAuthor(authorId);
+        }
+
         public void DeletePlay(int playId)
         {
             _playFunctions.DeleteAPlay(playId);
@@ -65,7 +80,6 @@ namespace PlayGalore_WPF_view
         {
             _playFunctions.UpdateAPlay(playId, title, bio, genre, author, theatre);
         }
-        
 
         private void HomeView_Clicked(object sender, RoutedEventArgs e)
         {
@@ -85,6 +99,11 @@ namespace PlayGalore_WPF_view
         public void SetSelectedPlay(object selectedItem)
         {
             _playFunctions.SetSelectedPlay(selectedItem);
+        }
+
+        public void SetSelectedAuthor(object selectedItem)
+        {
+            _authorFunctions.SetSelectedAuthor(selectedItem);
         }
     }
 }

@@ -15,7 +15,7 @@
          ScrollViewer.VerticalScrollBarVisibility="Visible"
          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  SelectionChanged="PlayContainer_SelectionChanged"
-                 MouseDoubleClick="PlayContainer_MouseDoubleClick"
+                 
                  >
 
             <ListBox.ItemsPanel>
