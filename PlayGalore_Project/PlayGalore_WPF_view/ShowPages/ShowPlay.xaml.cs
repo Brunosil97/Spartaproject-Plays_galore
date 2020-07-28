@@ -61,7 +61,12 @@ namespace PlayGalore_WPF_view.ShowPages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            var play = _mainWindow._playFunctions.selectedPlay;
+            if (play != null)
+            {
+                _mainWindow.UpdatePlay(play.PlayId, TitleBox.Text, BioBox.Text, GenreBox.Text, AuthorCombo.SelectedItem, TheatreCombo.SelectedItem);
+                this.Close();
+            }
         }
     }
 }

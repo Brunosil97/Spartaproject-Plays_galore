@@ -42,6 +42,24 @@ namespace PlayGalore_controller
             }
         }
 
+        public void UpdateAPlay(int playId, string title, string bio, string genre, object author, object theatre)
+        {
+            int? theatreObjId = null;
+
+            if (theatre != null) { theatreObjId = ((Theatre)theatre).TheatreId; };
+
+            using(var db = new PlayContext())
+            {
+                selectedPlay = db.Plays.Where(p => p.PlayId == playId).FirstOrDefault();
+                selectedPlay.Title = title;
+                selectedPlay.Bio = bio;
+                selectedPlay.Genre = genre;
+                selectedPlay.AuthorId = ((Author)author).AuthorId;
+                selectedPlay.TheatreId = theatreObjId;
+                db.SaveChanges();
+            }
+        }
+
         public void DeleteAPlay(int playId)
         {
             using(var db = new PlayContext())

@@ -60,6 +60,11 @@ namespace PlayGalore_WPF_view
         {
             _playFunctions.DeleteAPlay(playId);
         }
+
+        public void UpdatePlay(int playId, string title, string bio, string genre, object author, object theatre)
+        {
+            _playFunctions.UpdateAPlay(playId, title, bio, genre, author, theatre);
+        }
         
 
         private void HomeView_Clicked(object sender, RoutedEventArgs e)
