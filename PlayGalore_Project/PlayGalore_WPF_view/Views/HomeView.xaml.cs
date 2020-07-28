@@ -1,5 +1,6 @@
 ﻿using PlayGalore_model.Models;
 using PlayGalore_WPF_view.AddPages;
+using PlayGalore_WPF_view.ShowPages;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -48,6 +49,20 @@ namespace PlayGalore_WPF_view.Views
         {
             AddPlay addPlay = new AddPlay();
             addPlay.Show();
+        }
+
+        private void PlayContainer_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount >= 2)
+            {
+                ShowPlay showPlay = new ShowPlay();
+                showPlay.Show();
+            }
         }
     }
 }

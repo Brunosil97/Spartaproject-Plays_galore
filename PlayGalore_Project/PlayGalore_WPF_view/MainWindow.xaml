@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PlayGalore_WPF_view"
         mc:Ignorable="d"
         xmlns:views="clr-namespace:PlayGalore_WPF_view.Views"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
 
     <Window.Resources>
         
