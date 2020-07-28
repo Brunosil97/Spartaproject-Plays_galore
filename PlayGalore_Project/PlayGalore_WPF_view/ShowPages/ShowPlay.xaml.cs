@@ -22,14 +22,46 @@ namespace PlayGalore_WPF_view.ShowPages
         {
             InitializeComponent();
             PopulateShowItems();
+            PopulateAuthorCombo();
+            PopulateTheatreCombo();
+        }
+
+        public void PopulateAuthorCombo()
+        {
+            AuthorCombo.ItemsSource = _mainWindow.RetrieveAllAuthors();
+        }
+
+        public void PopulateTheatreCombo()
+        {
+            TheatreCombo.ItemsSource = _mainWindow.RetrieveAllTheatres();
         }
 
         public void PopulateShowItems()
         {
-            if(_mainWindow._playFunctions.selectedPlay != null)
+            var play = _mainWindow._playFunctions.selectedPlay;
+            if (play != null)
             {
-
+                TitleBox.Text = play.Title;
+                BioBox.Text = play.Bio;
+                GenreBox.Text = play.Genre;
+                AuthorCombo.SelectedItem = play.Author;
+                TheatreCombo.SelectedItem = play.Theatre;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var play = _mainWindow._playFunctions.selectedPlay;
+            if (play != null)
+            {
+                _mainWindow.DeletePlay(play.PlayId);
+                this.Close();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

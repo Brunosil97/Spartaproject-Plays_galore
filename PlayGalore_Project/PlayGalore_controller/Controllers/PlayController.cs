@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using PlayGalore_model.Models;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace PlayGalore_controller
 {
@@ -20,7 +21,6 @@ namespace PlayGalore_controller
             
         }
 
-        //[Obsolete]
         public void CreateAPlay(string title, string bio, string genre, object author, object theatre)
         {
 
@@ -38,6 +38,16 @@ namespace PlayGalore_controller
                     AuthorId = ((Author)author).AuthorId,
                     TheatreId = theatreObjId
                 });
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteAPlay(int playId)
+        {
+            using(var db = new PlayContext())
+            {
+                selectedPlay = db.Plays.Where(p => p.PlayId == playId).FirstOrDefault();
+                db.Plays.Remove(selectedPlay);
                 db.SaveChanges();
             }
         }

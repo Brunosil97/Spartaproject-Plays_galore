@@ -15,10 +15,10 @@
         <TextBox x:Name="BioBox" HorizontalAlignment="Left" Margin="10,112,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="415" Height="54"/>
         <Label Content="Select Author:" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top"/>
         <Label Content="Select Theatre:" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="260,360,0,0" VerticalAlignment="Top" Height="33" Width="127"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="260,360,0,0" VerticalAlignment="Top" Height="33" Width="127" Click="Button_Click_1"/>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="GenreBox" HorizontalAlignment="Left" Margin="10,222,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="31,360,0,0" VerticalAlignment="Top" Height="33" Width="128"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="31,360,0,0" VerticalAlignment="Top" Height="33" Width="128" Click="Button_Click"/>
 
     </Grid>
 </Window>
