@@ -56,6 +56,11 @@ namespace PlayGalore_WPF_view
             return _theatreFunctions.RetrieveAllPlaysForTheatre(theatreId);
         }
 
+        public List<Play> GetPlaysForSelectedAuthor(int authorId)
+        {
+            return _authorFunctions.RetrievePlaysForAuthor(authorId);
+        }
+
         public void CreateNewPlay(string title, string bio, string genre, object author, object theatre)
         {
             _playFunctions.CreateAPlay(title, bio, genre, author, theatre);

@@ -23,6 +23,14 @@ namespace PlayGalore_WPF_view.ShowPages
         {
             InitializeComponent();
             PopulateShowPage();
+            PopulateAuthorsPlay();
+        }
+
+        public void PopulateAuthorsPlay()
+        {
+            var author = _mainWindow._authorFunctions.selectedAuthor;
+            var plays = _mainWindow.GetPlaysForSelectedAuthor(author.AuthorId);
+            AuthorPlaysContainer.ItemsSource = plays;
         }
 
         public void PopulateShowPage()
@@ -52,6 +60,24 @@ namespace PlayGalore_WPF_view.ShowPages
             {
                 _mainWindow.DeleteAuthor(author.AuthorId);
                 this.Close();
+            }
+        }
+
+        private void AuthorPlaysContainer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AuthorPlaysContainer.SelectedItem != null)
+            {
+                _mainWindow.SetSelectedPlay(AuthorPlaysContainer.SelectedItem);
+                PopulateAuthorsPlay();
+            }
+        }
+
+        private void GridContainer_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount >= 2)
+            {
+                ShowPlay showPlay = new ShowPlay();
+                showPlay.Show();
             }
         }
     }

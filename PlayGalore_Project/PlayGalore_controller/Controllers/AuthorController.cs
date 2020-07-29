@@ -14,7 +14,7 @@ namespace PlayGalore_controller
         {
             using(var db = new PlayContext())
             {
-                var playQuery = db.Plays.Include(p => p.Author).Where(p => p.AuthorId == authorId);
+                var playQuery = db.Plays.Where(p => p.AuthorId == authorId);
                 var ans = playQuery.ToList();
                 return ans ;
             }

@@ -5,14 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlayGalore_WPF_view.ShowPages"
         mc:Ignorable="d"
-        Title="ShowAuthor" Height="450" Width="600">
+        Title="ShowAuthor" Height="450" Width="750">
     <Grid Background="Gray">
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="83,63,0,0" VerticalAlignment="Top"/>
-        <Label Content="Surname:" HorizontalAlignment="Left" Margin="344,63,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="83,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="23"/>
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="344,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="23"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="313,136,0,0" VerticalAlignment="Top" Width="122" Height="32" Click="Delete_Click"/>
-        <Button Content="update" HorizontalAlignment="Left" Margin="149,136,0,0" VerticalAlignment="Top" Height="34" Width="114" Click="Update_Click"/>
 
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="162,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.56,0.079"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="162,104,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="162,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="23"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="162,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="23"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="581,127,0,0" VerticalAlignment="Top" Width="122" Height="32" Click="Delete_Click"/>
+        <Button Content="update" HorizontalAlignment="Left" Margin="447,125,0,0" VerticalAlignment="Top" Height="34" Width="114" Click="Update_Click"/>
+
+        <ListBox x:Name="AuthorPlaysContainer"  Margin="10,181,10,10"
+                 Background="Gray"
+         ScrollViewer.VerticalScrollBarVisibility="Visible"
+         ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                 SelectionChanged="AuthorPlaysContainer_SelectionChanged"
+                 >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid x:Name="GridContainer" Width="332" Background="#4CFFFFFF" MouseDown="GridContainer_MouseDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="132*"/>
+                            <ColumnDefinition Width="200*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.RowSpan="3" Margin="0,0,12,0" Background="{Binding Color}" Width="120" Height="120" HorizontalAlignment="Left">
+                            <TextBlock Text="{Binding Author}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Foreground="White"/>
+                        </Grid>
+                        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Title}" FontSize="16" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Bio}" TextWrapping="Wrap"/>
+
+
+                    </Grid>
+
+                </DataTemplate>
+
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="6"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
     </Grid>
+
 </Window>
