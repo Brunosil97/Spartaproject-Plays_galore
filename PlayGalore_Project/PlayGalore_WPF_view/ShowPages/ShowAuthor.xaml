@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlayGalore_WPF_view.ShowPages"
         mc:Ignorable="d"
-        Title="ShowAuthor" Height="250" Width="600">
+        Title="ShowAuthor" Height="450" Width="600">
     <Grid Background="Gray">
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="83,63,0,0" VerticalAlignment="Top"/>
         <Label Content="Surname:" HorizontalAlignment="Left" Margin="344,63,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="83,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="159" Height="23"/>
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="344,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="168" Height="23"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="313,168,0,0" VerticalAlignment="Top" Width="122" Height="32" Click="Delete_Click"/>
-        <Button Content="update" HorizontalAlignment="Left" Margin="162,167,0,0" VerticalAlignment="Top" Height="34" Width="114" Click="Update_Click"/>
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="83,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="23"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="344,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="23"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="313,136,0,0" VerticalAlignment="Top" Width="122" Height="32" Click="Delete_Click"/>
+        <Button Content="update" HorizontalAlignment="Left" Margin="149,136,0,0" VerticalAlignment="Top" Height="34" Width="114" Click="Update_Click"/>
 
     </Grid>
 </Window>

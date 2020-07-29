@@ -24,6 +24,15 @@ namespace PlayGalore_WPF_view.ShowPages
         {
             InitializeComponent();
             PopulateShowPage();
+            PopulatePlayContainer();
+        }
+
+        public void PopulatePlayContainer()
+        {
+            var theatre = _mainWindow._theatreFunctions.SelectedTheatre;
+            var plays = _mainWindow.GetPlaysForSelectedTheatre(theatre.TheatreId);
+            TheatrePlaysContainer.ItemsSource = plays;
+            
         }
 
         public void PopulateShowPage()
@@ -54,6 +63,24 @@ namespace PlayGalore_WPF_view.ShowPages
             {
                 _mainWindow.UpdateTheatre(theatre.TheatreId, NameBox.Text, LocationBox.Text, Convert.ToInt32(CapacityBox.Text));
                 this.Close();
+            }
+        }
+
+        private void GridContainer_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ClickCount >= 2)
+            {
+                ShowPlay showPlay = new ShowPlay();
+                showPlay.Show();
+            }    
+        }
+
+        private void TheatrePlaysContainer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(TheatrePlaysContainer.SelectedItem != null)
+            {
+                _mainWindow.SetSelectedPlay(TheatrePlaysContainer.SelectedItem);
+                PopulatePlayContainer();
             }
         }
     }

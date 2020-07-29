@@ -17,6 +17,14 @@ namespace PlayGalore_controller
             }
         }
 
+        public List<Play> RetrieveAllPlaysForTheatre(int theatreId)
+        {
+            using (var db = new PlayContext())
+            {
+                return db.Plays.Where(t => t.TheatreId == theatreId).ToList();
+            }
+        }
+
         public void CreateATheatre(string name, string location, int capacity)
         {
             using(var db = new PlayContext())
