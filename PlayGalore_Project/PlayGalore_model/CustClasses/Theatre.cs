@@ -8,7 +8,12 @@ namespace PlayGalore_model.Models
     {
         public override string ToString()
         {
-            return $"{Name}";
+            return $"{Initial()}";
+        } 
+
+        public string Initial()
+        {
+            return $"{Name[0]}";
         }
     }
 }

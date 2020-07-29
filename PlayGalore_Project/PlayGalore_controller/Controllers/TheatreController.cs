@@ -1,4 +1,5 @@
-﻿using PlayGalore_model.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PlayGalore_model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace PlayGalore_controller
         {
             using (var db = new PlayContext())
             {
-                return db.Plays.Where(t => t.TheatreId == theatreId).ToList();
+                return db.Plays.Where(t => t.TheatreId == theatreId).Include(p => p.Author).ToList();
             }
         }
 

@@ -26,6 +26,7 @@
                 <DataTemplate>
 
                     <Grid Width="332" Background="#4CFFFFFF" MouseDown="Grid_MouseDown">
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="132*"/>
                             <ColumnDefinition Width="200*"/>

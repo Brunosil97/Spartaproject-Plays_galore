@@ -6,16 +6,19 @@
         xmlns:local="clr-namespace:PlayGalore_WPF_view.AddPages"
         mc:Ignorable="d"
         Title="AddTheatre" Height="200" Width="450">
-    <Grid Background="Gray">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\bruno\OneDrive\Documents\DarkTheatre2.jpg"/>
+        </Grid.Background>
 
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="10,58,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-        <Label Content="Location:" HorizontalAlignment="Left" Margin="157,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.051,0.559"/>
+        <Label Content="Location:" HorizontalAlignment="Left" Margin="189,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.051,0.559" FontWeight="Bold" FontStyle="Normal" Foreground="#FFF9F1F1"/>
         <TextBox x:Name="LocationBox" HorizontalAlignment="Left" Margin="157,58,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="18"/>
 
         <Button Content="Save" HorizontalAlignment="Left" Margin="156,108,0,0" VerticalAlignment="Top" Height="33" Width="127" Click="Save_Button"/>
-        <Label Content="Capacity:" HorizontalAlignment="Left" Margin="309,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Capacity:" HorizontalAlignment="Left" Margin="338,32,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FFFBF6F6"/>
         <TextBox x:Name="CapacityBox" HorizontalAlignment="Left" Margin="309,58,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Theatre:" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Theatre:" HorizontalAlignment="Left" Margin="35,32,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FFFBF8F8"/>
     </Grid>
 </Window>

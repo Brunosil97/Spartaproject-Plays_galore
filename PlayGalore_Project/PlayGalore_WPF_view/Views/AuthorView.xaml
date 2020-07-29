@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Transparent">
-        <TextBlock FontSize="50">Author Page</TextBlock>
+        <TextBlock FontSize="50">Author:</TextBlock>
 
         <ListBox x:Name="AuthorContainer"  Margin="10,65,10,10"
                  Background="Transparent"

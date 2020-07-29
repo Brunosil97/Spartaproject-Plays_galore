@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:PlayGalore_WPF_view.ShowPages"
         mc:Ignorable="d"
         Title="ShowPlay" Height="450" Width="450">
-    <Grid Background="Gray">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\bruno\OneDrive\Documents\PlaywrightBackground.jpg"/>
+        </Grid.Background>
         <ComboBox x:Name="AuthorCombo" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="TheatreCombo" HorizontalAlignment="Left" Margin="260,293,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="10,63,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

@@ -6,9 +6,13 @@
         xmlns:local="clr-namespace:PlayGalore_WPF_view.AddPages"
         mc:Ignorable="d"
         Title="AddAuthor" Height="250" Width="600">
-    <Grid Background="Gray">
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="83,63,0,0" VerticalAlignment="Top"/>
-        <Label Content="Surname:" HorizontalAlignment="Left" Margin="344,63,0,0" VerticalAlignment="Top"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\bruno\OneDrive\Documents\AuthorPen.jpg"/>
+        </Grid.Background>
+        
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="83,63,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FFFBF8F8"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="344,63,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FFF9F1F1"/>
         <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="83,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="159" Height="23"/>
         <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="344,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="168" Height="23"/>
         <Button Content="Save" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top" Width="122" Height="32" Click="Button_Click"/>
