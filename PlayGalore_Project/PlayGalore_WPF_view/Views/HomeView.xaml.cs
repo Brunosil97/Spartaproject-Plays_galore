@@ -23,12 +23,12 @@ namespace PlayGalore_WPF_view.Views
     {
 
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
+        private string searchInput = null;
         public HomeView()
         {
             InitializeComponent();
             DisplayRetrievedPlaysOnScroll();
         }
-
         public void DisplayRetrievedPlaysOnScroll()
         {
            var plays = _mainWindow.RetrieveAllPlaysForHome();
@@ -48,7 +48,9 @@ namespace PlayGalore_WPF_view.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddPlay addPlay = new AddPlay();
+            addPlay.DataContext = this;
             addPlay.Show();
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -57,6 +59,29 @@ namespace PlayGalore_WPF_view.Views
             {
                 ShowPlay showPlay = new ShowPlay();
                 showPlay.Show();
+            }
+        }
+
+        private void searchBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            List<Play> searchedPlays = new List<Play>();
+            
+            if (!string.IsNullOrEmpty(searchBox.Text))
+            {
+                searchInput = searchBox.Text.ToLower();
+                foreach (Play play in PlayContainer.ItemsSource)
+                {
+                    if (play.Title.ToLower().Contains(searchInput))
+                    {
+                        searchedPlays.Add(play);
+                    }
+                }
+                PlayContainer.ItemsSource = searchedPlays;
+            }
+            else
+            {
+                var plays = _mainWindow.RetrieveAllPlaysForHome();
+                PlayContainer.ItemsSource = plays;
             }
         }
     }

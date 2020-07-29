@@ -1,4 +1,5 @@
-﻿using PlayGalore_WPF_view.Views;
+﻿using Microsoft.EntityFrameworkCore.Internal;
+using PlayGalore_WPF_view.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,10 +20,12 @@ namespace PlayGalore_WPF_view.AddPages
     public partial class AddPlay : Window
     {
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
+        
 
         public HomeView HomeView { get; set; }
         public AddPlay()
         {
+            var homeWindow = this.DataContext;
             InitializeComponent();
             PopulateAuthorCombo();
             PopulateTheatreCombo();
@@ -43,15 +46,10 @@ namespace PlayGalore_WPF_view.AddPages
            if(AuthorCombo.SelectedItem != null)
             {
                 _mainWindow.CreateNewPlay(TitleBox.Text, BioBox.Text, GenreBox.Text, AuthorCombo.SelectedItem, TheatreCombo.SelectedItem);
-                HomeView.DisplayRetrievedPlaysOnScroll();
                 this.Close();
+                
 
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

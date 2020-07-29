@@ -12,6 +12,9 @@
         
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\bruno\OneDrive\Documents\PlaywrightBackground.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
