@@ -31,4 +31,10 @@ A fullstack MVC application, using c#. To create a hub of plays in london shown 
 
 **Sprint Retrospective**
 - Needed to have the pages automatically reload whenever a CRUD action was performed on a play, author or theatre.
+- Needed to make my search bar implement faster(laptop issue)
+
+**Sprint 3 goals**
+- The goal for this sprint is to implement a search bar to search for all plays
+- Be able to have live data, so that if any items are deleted, updated or created it will show
+- Create unit tests for my controller
 
