@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGalore_model", "PlayGalore_model\PlayGalore_model.csproj", "{3039AD42-C0BF-4669-9F62-6901648E0083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGalore_model", "PlayGalore_model\PlayGalore_model.csproj", "{3039AD42-C0BF-4669-9F62-6901648E0083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGalore_controller", "PlayGalore_controller\PlayGalore_controller.csproj", "{A3B38889-0690-4D13-97E0-57451DBCADD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGalore_controller", "PlayGalore_controller\PlayGalore_controller.csproj", "{A3B38889-0690-4D13-97E0-57451DBCADD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGalore_WPF_view", "PlayGalore_WPF_view\PlayGalore_WPF_view.csproj", "{58AAD2B7-D8C5-4EE9-853A-80F87D19E419}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGalore_WPF_view", "PlayGalore_WPF_view\PlayGalore_WPF_view.csproj", "{58AAD2B7-D8C5-4EE9-853A-80F87D19E419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGaloreTests", "PlayGaloreTests\PlayGaloreTests.csproj", "{B83F8183-AEFE-4D69-BB7F-EDE74FFDFB1E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3039AD42-C0BF-4669-9F62-6901648E0083} = {3039AD42-C0BF-4669-9F62-6901648E0083}
+		{A3B38889-0690-4D13-97E0-57451DBCADD3} = {A3B38889-0690-4D13-97E0-57451DBCADD3}
+		{58AAD2B7-D8C5-4EE9-853A-80F87D19E419} = {58AAD2B7-D8C5-4EE9-853A-80F87D19E419}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +34,10 @@ Global
 		{58AAD2B7-D8C5-4EE9-853A-80F87D19E419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AAD2B7-D8C5-4EE9-853A-80F87D19E419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58AAD2B7-D8C5-4EE9-853A-80F87D19E419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83F8183-AEFE-4D69-BB7F-EDE74FFDFB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83F8183-AEFE-4D69-BB7F-EDE74FFDFB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83F8183-AEFE-4D69-BB7F-EDE74FFDFB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83F8183-AEFE-4D69-BB7F-EDE74FFDFB1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
