@@ -26,6 +26,7 @@ namespace PlayGalore_WPF_view.AddPages
         private void Save_Button(object sender, RoutedEventArgs e)
         {
             _mainWindow.CreateNewTheatre(NameBox.Text, LocationBox.Text, Convert.ToInt32(CapacityBox.Text));
+            _mainWindow.RefreshTheatreView();
             this.Close();
         }
     }

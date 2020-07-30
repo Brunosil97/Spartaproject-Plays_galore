@@ -32,8 +32,7 @@ namespace PlayGalore_WPF_view.Views
         public void DisplayRetrievedPlaysOnScroll()
         {
            var plays = _mainWindow.RetrieveAllPlaysForHome();
-            PlayContainer.ItemsSource = plays;
-            
+            PlayContainer.ItemsSource = plays;   
         }
 
         private void PlayContainer_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,8 +47,8 @@ namespace PlayGalore_WPF_view.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddPlay addPlay = new AddPlay();
-            addPlay.DataContext = this;
             addPlay.Show();
+            DisplayRetrievedPlaysOnScroll();
 
         }
 
@@ -59,6 +58,7 @@ namespace PlayGalore_WPF_view.Views
             {
                 ShowPlay showPlay = new ShowPlay();
                 showPlay.Show();
+                DisplayRetrievedPlaysOnScroll();
             }
         }
 
@@ -76,7 +76,8 @@ namespace PlayGalore_WPF_view.Views
                         searchedPlays.Add(play);
                     }
                 }
-                PlayContainer.ItemsSource = searchedPlays;              
+                PlayContainer.ItemsSource = searchedPlays;
+                searchBox.Text = null;
             }
             else
             {

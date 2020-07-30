@@ -52,6 +52,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (theatre != null)
             {
                 _mainWindow.DeleteTheatre(theatre.TheatreId);
+                _mainWindow.RefreshTheatreView();
                 this.Close();
             }
         }
@@ -62,6 +63,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (theatre != null)
             {
                 _mainWindow.UpdateTheatre(theatre.TheatreId, NameBox.Text, LocationBox.Text, Convert.ToInt32(CapacityBox.Text));
+                _mainWindow.RefreshTheatreView();
                 this.Close();
             }
         }

@@ -21,8 +21,7 @@ namespace PlayGalore_WPF_view.AddPages
     {
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
         
-
-        public HomeView HomeView { get; set; }
+        public HomeView _homeView { get; set; }
         public AddPlay()
         {
             var homeWindow = this.DataContext;
@@ -46,6 +45,7 @@ namespace PlayGalore_WPF_view.AddPages
            if(AuthorCombo.SelectedItem != null)
             {
                 _mainWindow.CreateNewPlay(TitleBox.Text, BioBox.Text, GenreBox.Text, AuthorCombo.SelectedItem, TheatreCombo.SelectedItem);
+                _mainWindow.RefeshHomeView();
                 this.Close();
                 
 

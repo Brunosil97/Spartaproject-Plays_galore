@@ -135,5 +135,23 @@ namespace PlayGalore_WPF_view
         {
             _theatreFunctions.SetSelectedTheatre(selectedItem);
         }
+
+        public void RefeshHomeView()
+        {
+            DataContext = new HomeView();
+            ((HomeView)DataContext).DisplayRetrievedPlaysOnScroll();
+        }
+
+        public void RefreshAuthorView()
+        {
+            DataContext = new AuthorView();
+            ((AuthorView)DataContext).DisplayRetrievedAuthorsOnScroll();
+        }
+
+        public void RefreshTheatreView()
+        {
+            DataContext = new TheatreView();
+            ((TheatreView)DataContext).PopulateTheatreList();
+        }
     }
 }

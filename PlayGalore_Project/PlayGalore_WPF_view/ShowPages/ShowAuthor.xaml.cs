@@ -49,6 +49,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (author != null)
             {
                 _mainWindow.UpdateAuthor(author.AuthorId, firstName.Text, lastName.Text);
+                _mainWindow.RefreshAuthorView();
                 this.Close();
             }
         }
@@ -59,6 +60,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (author != null)
             {
                 _mainWindow.DeleteAuthor(author.AuthorId);
+                _mainWindow.RefreshAuthorView();
                 this.Close();
             }
         }

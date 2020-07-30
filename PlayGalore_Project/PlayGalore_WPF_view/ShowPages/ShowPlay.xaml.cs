@@ -55,6 +55,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (play != null)
             {
                 _mainWindow.DeletePlay(play.PlayId);
+                _mainWindow.RefeshHomeView();
                 this.Close();
             }
         }
@@ -65,6 +66,7 @@ namespace PlayGalore_WPF_view.ShowPages
             if (play != null)
             {
                 _mainWindow.UpdatePlay(play.PlayId, TitleBox.Text, BioBox.Text, GenreBox.Text, AuthorCombo.SelectedItem, TheatreCombo.SelectedItem);
+                _mainWindow.RefeshHomeView();
                 this.Close();
             }
         }

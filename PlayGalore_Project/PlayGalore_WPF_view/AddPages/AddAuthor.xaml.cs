@@ -26,6 +26,7 @@ namespace PlayGalore_WPF_view.AddPages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _mainWindow.CreateNewAuthor(firstName.Text, lastName.Text);
+            _mainWindow.RefreshAuthorView();
             this.Close();
         }
     }
