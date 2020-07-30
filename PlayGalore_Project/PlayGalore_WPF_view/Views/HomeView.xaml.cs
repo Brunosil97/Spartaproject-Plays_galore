@@ -76,7 +76,7 @@ namespace PlayGalore_WPF_view.Views
                         searchedPlays.Add(play);
                     }
                 }
-                PlayContainer.ItemsSource = searchedPlays;
+                PlayContainer.ItemsSource = searchedPlays;              
             }
             else
             {

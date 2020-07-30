@@ -35,7 +35,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid Grid.RowSpan="3" Margin="0,0,12,0" Background="PaleGoldenrod" Width="120" Height="120" HorizontalAlignment="Left">
-                            <TextBlock x:Name="Initals" Text="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Foreground="Black"/>
+                            <TextBlock x:Name="Initals" Text="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="Black"/>
                         </Grid>
                         <TextBlock
                              x:Name="AuthorName" Grid.Column="1" Grid.ColumnSpan="3" FontSize="16" VerticalAlignment="Center">

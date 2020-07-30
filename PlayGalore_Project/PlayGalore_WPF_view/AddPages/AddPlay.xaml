@@ -13,14 +13,15 @@
         <ComboBox x:Name="AuthorCombo" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="TheatreCombo" HorizontalAlignment="Left" Margin="260,293,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Margin="10,63,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Title:" Margin="10,32,356,376"/>
-        <Label Content="Bio:" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Bio:" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="BioBox" HorizontalAlignment="Left" Margin="10,112,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="415" Height="54"/>
-        <Label Content="Select Author:" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top"/>
-        <Label Content="Select Theatre:" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select Author:" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Select Theatre:" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="260,360,0,0" VerticalAlignment="Top" Height="33" Width="127" Click="Button_Click"/>
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="GenreBox" HorizontalAlignment="Left" Margin="10,222,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="13,37,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>
