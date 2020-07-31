@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayGalore_WPF_view.Views;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +19,7 @@ namespace PlayGalore_WPF_view.AddPages
     public partial class AddAuthor : Window
     {
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
+        public AuthorView _homeView { get; set; }
         public AddAuthor()
         {
             InitializeComponent();

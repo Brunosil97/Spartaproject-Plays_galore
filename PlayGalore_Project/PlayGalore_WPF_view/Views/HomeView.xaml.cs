@@ -23,7 +23,7 @@ namespace PlayGalore_WPF_view.Views
     {
 
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
-        private string searchInput = null;
+
         public HomeView()
         {
             InitializeComponent();

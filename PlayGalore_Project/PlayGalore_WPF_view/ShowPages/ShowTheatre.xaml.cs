@@ -1,4 +1,5 @@
 ﻿using PlayGalore_model.Models;
+using PlayGalore_WPF_view.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,6 +21,8 @@ namespace PlayGalore_WPF_view.ShowPages
     public partial class ShowTheatre : Window
     {
         public MainWindow _mainWindow = ((MainWindow)Application.Current.MainWindow);
+
+        public TheatreView _theatreView { get; set; }
         public ShowTheatre()
         {
             InitializeComponent();
