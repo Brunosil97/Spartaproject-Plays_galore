@@ -5,7 +5,7 @@ A fullstack MVC application, using c#. To create a hub of plays in london shown 
 - To create an application that for users to add their plays online, that have been written by playwrights and view plays that are being shown in theatres around london.
 
 **Class Diagram: **
-![ERD](Spartaproject-Plays_galore/classdiagram.png?raw=true "Title")
+![ERD](Spartaproject-Plays_galore/blob/master/PlayGalore_Project/classdiagram.png?raw=true "Title")
 
 **Sprint 1 Goals**:
 - The goal was to establish a database with three tables, and create the three layers of the MVC model.
