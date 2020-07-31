@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="750">
     <Grid Background="Transparent">
-        <TextBlock FontSize="50">Plays:</TextBlock>
+        <TextBlock FontSize="50" FontStyle="Italic">Plays:</TextBlock>
 
         <ListBox x:Name="PlayContainer"  Margin="10,65,10,10"
                  Background="Transparent"
@@ -56,8 +56,8 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
-        <Button Content="Add A Play" HorizontalAlignment="Left" Margin="541,10,0,0" VerticalAlignment="Top" Height="50" Width="208" Click="Button_Click"/>
+        <Button Content="Add A Play" HorizontalAlignment="Left" Margin="532,10,0,0" VerticalAlignment="Top" Height="50" Width="208" Click="Button_Click"/>
         <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="348,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="26" MouseEnter="searchBox_MouseEnter"/>
-        <Label Content="Search:" HorizontalAlignment="Left" Margin="247,10,0,0" VerticalAlignment="Top" Width="79" FontSize="25"/>
+        <Label Content="Search:" FontStyle="Italic" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="113" FontSize="25"/>
     </Grid>
 </UserControl>
