@@ -2,7 +2,7 @@
 A fullstack MVC application, using c#. To create a hub of plays in london shown in a WPF format.
 
 **Project Overview**:
-- To create an application that for users to add their plays online, that have been written by playwrights and view plays that are being shown in theatres around london.
+- To create an application for a user to add their plays online, that have been written by playwrights and view plays that are being shown in theatres around london. A user can search for a specific play and navigate through the application with CRUD features.
 
 **Class Diagram**:
 ![ERD](PlayGalore_Project/classdiagram.png?raw=true "Title")
