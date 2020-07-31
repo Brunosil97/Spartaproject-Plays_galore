@@ -38,3 +38,13 @@ A fullstack MVC application, using c#. To create a hub of plays in london shown 
 - Be able to have live data, so that if any items are deleted, updated or created it will show
 - Create unit tests for my controller
 
+**Sprint 3 Review**
+- Sprint 3 worked out really well and were able to complete everything
+- All user stories achieved and implemented
+- Able to have unit tests to test out CRUD Functioniality
+- Design not quite up to presentational standard
+
+**Sprint 3 Retrospective**
+- Needed to do more design for my WPF layer, which I have now, to make it more presentable
+- Needed to improve on my search function to run faster (changed event handlerer)
+
