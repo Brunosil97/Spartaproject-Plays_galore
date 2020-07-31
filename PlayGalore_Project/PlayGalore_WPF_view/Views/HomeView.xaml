@@ -57,7 +57,7 @@
             </ListBox.ItemContainerStyle>
         </ListBox>
         <Button Content="Add A Play" HorizontalAlignment="Left" Margin="532,10,0,0" VerticalAlignment="Top" Height="50" Width="208" Click="Button_Click"/>
-        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="348,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="26" MouseEnter="searchBox_MouseEnter"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="348,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="26" KeyDown="searchBox_Enter"/>
         <Label Content="Search:" FontStyle="Italic" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="113" FontSize="25"/>
     </Grid>
 </UserControl>

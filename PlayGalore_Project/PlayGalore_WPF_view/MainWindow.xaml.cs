@@ -153,5 +153,10 @@ namespace PlayGalore_WPF_view
             DataContext = new TheatreView();
             ((TheatreView)DataContext).PopulateTheatreList();
         }
+
+        public List<Play> ReturnSearchItemsForPlays(string title)
+        {
+            return _playFunctions.SearchedPlays(title);
+        }
     }
 }

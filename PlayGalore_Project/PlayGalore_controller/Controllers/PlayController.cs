@@ -11,7 +11,16 @@ namespace PlayGalore_controller
 {
     public class PlayController
     {
+
         public Play selectedPlay { get; set; }
+
+        public List<Play> SearchedPlays(string title)
+        {
+            using (var db = new PlayContext())
+            {
+                return db.Plays.Where(p => p.Title.Contains(title)).ToList();
+            }
+        }
         public List<Play> RetrieveAllPlays()
         {
             using(var db = new PlayContext())

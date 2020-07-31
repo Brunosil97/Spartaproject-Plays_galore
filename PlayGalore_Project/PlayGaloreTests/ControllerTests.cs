@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using PlayGalore_controller;
 using PlayGalore_model.Models;
+using System.Linq;
 
 namespace PlayGaloreTests
 {
@@ -98,10 +99,75 @@ namespace PlayGaloreTests
             Assert.AreEqual(theatreCount, newCount);
         }
 
-        //[Test]
-        //public void ReturnsListOfPlays()
-        //{
-        //    _playController.RetrieveAllPlays()
-        //}
+        [Test]
+        public void CheckIfSearchRetrievesSearchedPlay()
+        { 
+            int searchItem = 1;
+
+            var authors = _authorController.RetrieveAllAuthors();
+            var author = authors[0];
+
+            _playController.CreateAPlay("UnitTestSearch", "bio", "genre", author, null);
+
+           var searchedPlays = _playController.SearchedPlays("UnitTestSearch");
+
+            Assert.AreEqual(searchItem, searchedPlays.Count);
+
+            _testMethods.DeletePlay();
+        }
+
+        [Test]
+        public void UpdatePlay()
+        {
+            var authors = _authorController.RetrieveAllAuthors();
+            var author = authors[0];
+            _playController.CreateAPlay("title", "bio", "genre", author, null);
+
+            var play = _playController.RetrieveAllPlays().Last();
+            var selectedPlayTitle = play.Title;
+
+            _playController.UpdateAPlay(play.PlayId, "UpdatedTitle", "bio", "genre", author, null);
+
+            var updatedPlay = _playController.RetrieveAllPlays().Last();
+            var updatedPlayTitle = updatedPlay.Title;
+
+            Assert.AreNotEqual(selectedPlayTitle, updatedPlayTitle);
+
+            _testMethods.DeletePlay();
+
+        }
+
+        [Test]
+        public void UpdateAuthor()
+        {
+          _authorController.CreateAAuthor("firstName", "lastName");
+            var author = _authorController.RetrieveAllAuthors().Last();
+            var selectedAuthorTitle = author.FirstName;
+
+            _authorController.UpdateExistingAuthor(author.AuthorId, "UpdatedName", "LastName");
+
+            var updatedAuthor = _authorController.RetrieveAllAuthors().Last();
+            var updatedAuthorTitle = updatedAuthor.FirstName;
+
+            Assert.AreNotEqual(selectedAuthorTitle, updatedAuthorTitle);
+            _testMethods.DeleteAuthor();
+        }
+
+        [Test]
+        public void UpdateTheatre()
+        {
+            _theatreController.CreateATheatre("name", "location", 1);
+            var theatre = _theatreController.RetrieveAllTheatres().Last();
+            var selectedTheatreName = theatre.Name;
+
+            _theatreController.UpdateExistingTheatre(theatre.TheatreId, "UpdatedName", "location", 1);
+
+            var updatedTheatre = _theatreController.RetrieveAllTheatres().Last();
+            var updatedTheatreName = updatedTheatre.Name;
+
+            Assert.AreNotEqual(selectedTheatreName, updatedTheatreName);
+
+            _testMethods.DeleteTheatre();
+        }
     }
 }

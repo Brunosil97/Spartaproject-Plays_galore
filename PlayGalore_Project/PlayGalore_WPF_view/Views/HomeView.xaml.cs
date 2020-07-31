@@ -62,27 +62,19 @@ namespace PlayGalore_WPF_view.Views
             }
         }
 
-        private void searchBox_MouseEnter(object sender, MouseEventArgs e)
+        private void searchBox_Enter(object sender, KeyEventArgs e)
         {
-            List<Play> searchedPlays = new List<Play>();
-            
-            if (!string.IsNullOrEmpty(searchBox.Text))
+            if (e.Key == Key.Enter)
             {
-                searchInput = searchBox.Text.ToLower();
-                foreach (Play play in PlayContainer.ItemsSource)
+                if (!string.IsNullOrEmpty(searchBox.Text))
                 {
-                    if (play.Title.ToLower().Contains(searchInput))
-                    {
-                        searchedPlays.Add(play);
-                    }
+                    PlayContainer.ItemsSource = _mainWindow.ReturnSearchItemsForPlays(searchBox.Text);
                 }
-                PlayContainer.ItemsSource = searchedPlays;
-                searchBox.Text = null;
-            }
-            else
-            {
-                var plays = _mainWindow.RetrieveAllPlaysForHome();
-                PlayContainer.ItemsSource = plays;
+                else
+                {
+                    var plays = _mainWindow.RetrieveAllPlaysForHome();
+                    PlayContainer.ItemsSource = plays;
+                }
             }
         }
     }
